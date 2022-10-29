@@ -75,12 +75,6 @@ number = check_type(number)
 row = split_number(number)
 print(sum_row(row))
 
-#number = convert_type(number)
-# number = check_type(number)
-
-
-
-# check_type(number)
 
 
 
