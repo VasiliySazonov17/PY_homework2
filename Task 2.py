@@ -9,7 +9,7 @@ def factorial_num (number):
 
     factorial = []
     add_num = 1
-    for i in range(1, number):
+    for i in range(1, number+1):
         
         factorial.append(add_num*i)
         add_num *= i

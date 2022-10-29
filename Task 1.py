@@ -5,20 +5,20 @@
 # - 6782 -> 23
 # - 0,56 -> 11
      
-def split_int(number):
+# def split_int(number):
 
-    row = []          
-    while number > 10:
+#     row = []          
+#     while number > 10:
 
-        split_num = number % 10
-        row.append(split_num)
-        number = int(number / 10)
+#         split_num = number % 10
+#         row.append(split_num)
+#         number = int(number / 10)
 
-    else:
-        row.append(number)
+#     else:
+#         row.append(number)
 
-    print(row)
-    return row
+#     print(row)
+#     return row
 
 
 def check_type(number):
