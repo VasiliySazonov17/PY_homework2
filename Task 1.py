@@ -4,38 +4,22 @@
 
 # - 6782 -> 23
 # - 0,56 -> 11
+     
+def split_int(number):
 
-# def check_type(number):
+    row = []          
+    while number > 10:
 
-#     if (float == type(number)):
+        split_num = number % 10
+        row.append(split_num)
+        number = int(number / 10)
 
-#         while(float == type(number)):
+    else:
+        row.append(number)
 
-#             number = number * 10
-#             print(number)
-#         print(number)
+    print(row)
+    return row
 
-#     elif (int == type(number)):
-#         print(number)
-
-#     else:
-#         print("error, input number")
-
-        
-# def split_number(number):
-
-#     row = []          
-#     while number > 10:
-
-#         split_num = number % 10
-#         row.append(split_num)
-#         number = int(number / 10)
-
-#     else:
-#         row.append(number)
-
-#     print(row)
-#     return row
 
 def check_type(number):
 
@@ -53,20 +37,45 @@ def check_type(number):
     return number
 
 
-def convert_type(number):
+def split_number(number):
 
-    number = float(number)
-    while (number % 10 != 0):
-        number *= 10
-    number = str(number)
-    number = int(number)
-    number /= 10
-    return number
+    if (float == type(number)):
+
+        while(number % 10 != 0):
+            number *= 10
+        number /= 10
+        number = int(number)
+    
+    row = []          
+    while number > 10:
+
+        split_num = number % 10
+        row.append(split_num)
+        number = int(number / 10)
+
+    else:
+        row.append(number)
+        
+    return row
+
+        
+def sum_row(row):
+
+    sum_row = 0
+
+    for i in row:
+        sum_row += i
+    
+    return sum_row
+
 
 print("Input number: ") 
-number = float(input())
+number = input()
+number = check_type(number)
+row = split_number(number)
+print(sum_row(row))
+
 #number = convert_type(number)
-print(int(number%10))
 # number = check_type(number)
 
 
